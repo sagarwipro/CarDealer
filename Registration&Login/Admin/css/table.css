@@ -1,0 +1,25 @@
+table {
+    margin-top: 60px;
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    height: 15px;
+    text-align: center;
+    border: 1px solid #dddddd;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+tr:nth-child(odd) {
+    background-color: white;
+}
+
+h2 {
+    margin-top: 100px;
+}
