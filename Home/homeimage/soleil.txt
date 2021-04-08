@@ -1,0 +1,1 @@
+The files image is uploading and description file is generating as a txt format and all these are in server not in database but names are available in database only.

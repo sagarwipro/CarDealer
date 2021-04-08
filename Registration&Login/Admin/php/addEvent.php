@@ -83,8 +83,8 @@ header("Location: http://localhost/CarDealer/Registration&Login/Login/index.php"
         enctype="multipart/form-data">
         <label style="color:white;">Upload an Image:</label>
         <input type="file" name="imgfile" id="IfileToUpload"><br><br>
-        <label style="color:white;">Upload a text file for description:</label>
-        <input type="file" name="textFile" id="TfileToUpload"><br><br>
+        <!-- <label style="color:white;">Upload a text file for description:</label>
+        <input type="file" name="textFile" id="TfileToUpload"><br><br> -->
         <input type="text" name="place" id="place" placeholder="Place"><br><br>
         <input type="date" name="date" id="date"><br><br>
         <textarea name="explain" rows=15; cols=30;></textarea><br><br>

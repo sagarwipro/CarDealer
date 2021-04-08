@@ -4,19 +4,8 @@
     $uploadDirectory = "../../../Home/homeimage/";
 
   
-    $fileExt = ['txt']; // These will be the only file extensions allowed 
-    $fileName = $_FILES['textFile']['name'];
-    $fileSize = $_FILES['textFile']['size'];
-    $fileTmpName  = $_FILES['textFile']['tmp_name'];
-    $fileType = $_FILES['textFile']['type'];
-    $tmp = explode('.', $fileName);
-    $fileExtension = end($tmp);
-    $uploadPath = $uploadDirectory . basename($fileName); 
-    $txt=basename($fileName);
     if (isset($_POST['submit'])) {
 
-        $didUpload = move_uploaded_file($fileTmpName, $uploadPath);
-        $old = $uploadPath;
         $fileExt = ['jpeg','jpg','png']; // These will be the only file extensions allowed 
         $fileName = $_FILES['imgfile']['name'];
         $fileSize = $_FILES['imgfile']['size'];
@@ -25,13 +14,17 @@
         $tmp = explode('.', $fileName);
         $fileExtension = end($tmp);
         $uploadPath = $uploadDirectory . basename($fileName); 
-        file_put_contents($old, $_POST['explain']);
-        rename($old,$uploadDirectory. pathinfo(basename($fileName), PATHINFO_FILENAME).".txt");
+        
+        $newFileName = $uploadDirectory.substr($fileName, 0, strrpos($fileName, '.')).".txt";
+        $newFileContent = $_POST['explain'];
+
+        // file_put_contents($old, $_POST['explain']);
+        // rename($old,$uploadDirectory. pathinfo(basename($fileName), PATHINFO_FILENAME).".txt");
         $didUpload = move_uploaded_file($fileTmpName, $uploadPath);
-        if ($didUpload) {
+        if ($didUpload && file_put_contents($newFileName, $newFileContent)) {
             $dbhost = "127.0.0.1:3308";
             $dbuser = "root";
-            $dbpass = "";
+            $dbpass = "password";
             
             $conn = new mysqli($dbhost, $dbuser, $dbpass,"cardealer") or die("Connect failed: %s\n". $conn -> error);
             

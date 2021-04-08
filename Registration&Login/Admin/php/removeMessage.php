@@ -4,7 +4,7 @@ if (isset($_POST['remove']) && isset($_POST['check']))
     {
         $dbhost = "127.0.0.1:3308";
         $dbuser = "root";
-        $dbpass = "";
+        $dbpass = "password";
         
         $conn = new mysqli($dbhost, $dbuser, $dbpass,"cardealer") or die("Connect failed: %s\n". $conn -> error);
         foreach($_POST['check'] as $del_id)
@@ -21,7 +21,7 @@ if (isset($_POST['remove']) && isset($_POST['check']))
            else {
           
             echo '<script language="javascript">';
-            echo 'alert("'.$del_id.'");';
+            echo 'alert("Ops something went wrong.'.$del_id.'");';
             echo 'window.location.href="http://localhost/CarDealer/Registration&Login/Admin/adminportal.php";';
               echo '</script>';
                 }
