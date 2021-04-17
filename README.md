@@ -1,6 +1,6 @@
 # Technologies Description
 
-![mysql](https://github.com/sagarwipro/sagarwipro.github.io/tree/master/images/mysql.png?raw=true)
+![mysql](https://github.com/sagarwipro/sagarwipro.github.io/blob/master/images/mysql.png?raw=true)
 **MySQL** is used in most of the part of this application. The area like event list,
                         registration, Login form are rich with it and to reduce code and raise the security I
                         have used only one file for access DB.<br/>
