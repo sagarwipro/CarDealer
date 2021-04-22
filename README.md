@@ -1,10 +1,10 @@
 # Required Application
 
-**Code Editor Tool i.e.,Visual studio code**
-**PHP Mailer**
-**MySQL**
-**PHP**
-**Updated Browser**
+**Code Editor Tool i.e.,Visual studio code**<br/>
+**PHP Mailer**<br/>
+**MySQL**<br/>
+**PHP**<br/>
+**Updated Browser**<br/>
 
 
 
