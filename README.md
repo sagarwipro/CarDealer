@@ -1,4 +1,16 @@
-# Technologies Description
+# Required Application
+
+**Code Editor Tool i.e.,Visual studio code**
+**PHP Mailer**
+**MySQL**
+**PHP**
+**Updated Browser**
+
+
+
+
+
+# Used Technologies Description
 
 <img src="https://github.com/sagarwipro/sagarwipro.github.io/blob/master/images/mysql.png" width="200">
 **MySQL** is used in most of the part of this application. The area like event list,
